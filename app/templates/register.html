@@ -1,0 +1,41 @@
+
+
+{% block content %}
+<form class="form" action="/register" method="POST">
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3">
+			<H1 align="center">Register</H1>	
+				<div class = "form-group input">
+					{{form.key.label}}
+					{{form.key(class_="form-control", placeholder="pick a digit key for securing your data...")}}
+				</div>
+				<div class = "form-group input">
+					{{form.username.label}}
+					{{form.username(class_="form-control", placeholder="pick a username...")}}
+				</div>
+				<div class = "form-group input">
+					{{form.password.label}}
+					{{form.password(class_="form-control", placeholder="pick a password..")}}
+				</div>
+				<div class = "form-group input">
+					{{form.firstname.label}}
+					{{form.firstname(class_="form-control", placeholder="")}}
+				</div>
+				<div class = "form-group input">
+					{{form.lastname.label}}
+					{{form.lastname(class_="form-control", placeholder="")}}
+				</div>
+				<div class = "form-group input">
+					{{form.tel.label}}
+					{{form.tel(class_="form-control", placeholder="")}}
+				</div>
+				<div align="center">
+					{{form.submit(class_="btn btn-primary btn-lg")}}
+				</div>
+				{% if error %}
+					<h4 style="color:red">Wrong key format. Are you sure you introduced only digits? Try another key or another length of the key</h4>
+				{% endif %}
+		</div>
+	</div>
+</form>
+{% endblock %}

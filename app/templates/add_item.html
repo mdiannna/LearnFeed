@@ -1,0 +1,57 @@
+{% block head %}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+{% block styles %}
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+{% endblock %}
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+{% endblock %}
+
+{% block content %}
+<form class="form" action="" method="POST" enctype=multipart/form-data>
+
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3">
+			<H1 align="center">Adauga o tema</H1>	
+			<div class = "form-group input">
+				{{form.tema.label}}
+				{{form.tema(class_="form-control", placeholder="")}}
+			</div>
+			<div class = "form-group input">
+				{{form.disciplina.label}}
+				{{form.disciplina(class_="form-control", placeholder="")}}
+			</div>
+			<div class = "form-group input">
+				{{form.poza.label}}
+				{{form.poza(class_="form-control", placeholder="")}}
+			</div>
+			
+
+			<div class="col-md-5 col-md-offset-1 form-group input blueText col-md-6">
+			Sau Upload poza
+				<div style="display:inline;">
+					<label>
+						<input type="file" class="fileinput" name="file1" id="fileToUpload">
+					</label>
+				</div>
+			</div>
+			
+			<div class = "form-group input">
+				{{form.text.label}}
+				{{form.text(class_="form-control", placeholder="")}}
+			</div>
+
+			<div align="center">
+				{{form.submit(class_="btn btn-primary btn-lg")}}
+			</div>
+		</div>
+	</div>
+
+</form>
+
+{% endblock %}

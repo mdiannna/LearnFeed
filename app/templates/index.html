@@ -1,0 +1,55 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Learn Feed University of Bucharest</title>
+  {% block styles %}
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://bootswatch.com/readable/bootstrap.min.css" >
+  {% endblock %}
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</head>
+
+{% block content %}
+<div class="header" style="margin: 20px; color: #512DA8"><h1 align="center" style="font-weight: bold; ">Learn Feed</h1></div>
+  
+
+{% for item in items %}
+<br>
+  <div class="container" >
+   
+  
+    <H2 align="center" style="color:#C2185B">{{item.tema }}</H2>
+    <br>
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1 col-xs-12 ">
+        <img src="{{ item.poza }}" width="100%">
+      </div>
+    </div>
+    <br>
+    <p>{{item.text}}</p>
+     <h4 align="right" style="color: #607D8B">{{item.disciplina}}</h4>
+  
+    </div>
+  
+   <br>
+  <br>
+  <hr style="border-top: 2px solid #E91E63">
+  
+{% endfor %}
+  
+  <!-- <div class="row" align="center">
+    <button class="btn btn-warning">Load more</button>    
+  </div>
+   -->
+  <footer>
+  <hr>
+     &copy; Copyright 2016 Diana 
+  </footer>
+{% endblock %}
+</html>

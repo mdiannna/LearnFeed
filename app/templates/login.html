@@ -1,0 +1,27 @@
+
+{% block content %}
+<form class="form" action="" method="POST">
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3">
+			<H1 align="center">Log In</H1>	
+				<div class = "form-group input">
+					{{form.username.label}}
+					{{form.username(class_="form-control", placeholder="")}}
+				</div>
+				<div class = "form-group input">
+					{{form.password.label}}
+					{{form.password(class_="form-control", placeholder="")}}
+				</div>
+				<div align="center">
+					{{form.submit(class_="btn btn-primary btn-lg")}}
+				</div>
+				{% if error %}
+					<!-- <h4 style="color:red">{{error}}</h4> -->
+				
+					<h4 style="color:red">Wrong name or password. Please try again.</h4>
+				{% endif %}
+
+		</div>
+	</div>
+</form>
+{% endblock %}

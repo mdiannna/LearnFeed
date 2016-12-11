@@ -1,0 +1,1 @@
+db_path ="sqlite:////home/mdiannna/LearnFeed/database.db"
